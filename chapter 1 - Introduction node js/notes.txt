@@ -1,0 +1,130 @@
+node js built-in modules 
+
+http – HTTP server banane ke liye.
+fs – File system operations (read/write files).
+path – File aur directory paths handle karne ke liye.
+os – Operating system-related information.
+url – URL parsing aur formatting.
+querystring – URL query strings ko parse aur format karne ke liye.
+crypto – Cryptography and encryption.
+events – Event-driven programming ke liye.
+stream – Data streams ke liye.
+util – Utility functions (debugging, inheritance).
+dns – Domain name system lookups.
+zlib – Compression ke liye.
+net – Networking module (TCP, UDP connections).
+timers – Timer functions (setTimeout, setInterval).
+child_process – Child processes run karne ke liye (system commands).
+
+
+
+
+
+// Node js built in modules ke method
+
+1. http Module
+http.createServer([options][, requestListener])
+http.get(options[, callback])
+http.request(options[, callback])
+http.IncomingMessage
+req.method
+req.url
+req.headers
+http.OutgoingMessage
+res.writeHead(statusCode[, statusMessage][, headers])
+res.write(chunk[, encoding][, callback])
+res.end([data][, encoding][, callback])
+res.setHeader(name, value)
+res.removeHeader(name)
+
+2. fs Module
+fs.readFile(path[, options], callback)
+fs.writeFile(file, data[, options], callback)
+fs.appendFile(file, data[, options], callback)
+fs.unlink(path, callback)
+fs.readdir(path[, options], callback)
+fs.stat(path, callback)
+fs.mkdir(path[, options], callback)
+fs.rmdir(path, callback)
+fs.rename(oldPath, newPath, callback)
+fs.existsSync(path)
+fs.readFileSync(path[, options])
+fs.writeFileSync(file, data[, options])
+
+3. path Module
+path.basename(p[, ext])
+path.dirname(p)
+path.extname(p)
+path.join(...paths)
+path.resolve(...paths)
+path.relative(from, to)
+path.parse(pathString)
+path.format(pathObject)
+
+4. os Module
+os.arch()
+os.platform()
+os.type()
+os.release()
+os.hostname()
+os.uptime()
+os.loadavg()
+os.totalmem()
+os.freemem()
+os.cpus()
+os.networkInterfaces()
+
+5. events Module
+EventEmitter.on(eventName, listener)
+EventEmitter.once(eventName, listener)
+EventEmitter.off(eventName, listener)
+EventEmitter.removeListener(eventName, listener)
+EventEmitter.emit(eventName[, ...args])
+EventEmitter.listenerCount(emitter, eventName)
+
+6. crypto Module
+crypto.createHash(algorithm)
+crypto.createHmac(algorithm, key)
+crypto.createCipheriv(algorithm, key, iv)
+crypto.createDecipheriv(algorithm, key, iv)
+crypto.randomBytes(size[, callback])
+crypto.pbkdf2(password, salt, iterations, keylen, digest, callback)
+
+7. stream Module
+stream.readable.pipe(destination[, options])
+stream.Writable.write(chunk[, encoding][, callback])
+stream.Writable.end([chunk][, encoding][, callback])
+stream.Readable.read([size])
+stream.on('data', callback)
+stream.on('end', callback)
+stream.on('error', callback)
+
+8. child_process Module
+child_process.exec(command[, options], callback)
+child_process.spawn(command[, args][, options])
+child_process.fork(modulePath[, args][, options])
+child_process.execFile(file[, args][, options], callback)
+9. url Module
+url.parse(urlString[, parseQueryString[, slashesDenoteHost]])
+url.format(urlObject)
+url.resolve(from, to)
+10. querystring Module
+querystring.stringify(obj[, sep[, eq[, options]]])
+querystring.parse(str[, sep[, eq[, options]]])
+querystring.escape(str)
+querystring.unescape(str)
+
+
+
+
+
+<-------------------- Cahpter 5: parsing request ---------------------->
+
+--> What is stream
+Ans:A stream in Node.js is a continuous flow of data that can be read or written piece by piece, rather than loading all at once. It helps efficiently handle large files or real-time data by processing it as it arrives.
+
+
+stream, chunks and buffer --> stream ka matlab continuous data ka flow karnaor jo flow karta he chote chote data usi ko hi chunks kehte he or vo duplicite stream me collect hoga or buffer ki helps se use sequence me lagayenge ya fir order me etc.
+
+
+
